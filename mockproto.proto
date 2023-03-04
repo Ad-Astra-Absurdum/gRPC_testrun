@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package TimeService;
+
+option csharp_namespace = "TimeService";
+
+service TimeService {
+  rpc GetGameTime (TimeRequest) returns (TimeResponse) {}
+}
+
+message TimeRequest {}
+
+message TimeResponse {
+  string time = 1;
+}
